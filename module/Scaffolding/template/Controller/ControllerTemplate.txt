@@ -1,0 +1,15 @@
+<?php
+
+namespace {{module}}\Controller;
+
+use Zend\Mvc\Controller\AbstractActionController;
+
+class {{controller}}Controller extends AbstractActionController
+{
+
+    public function __construct()
+    {
+
+    }
+
+}

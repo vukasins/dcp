@@ -1,0 +1,16 @@
+<?php
+
+namespace {{module}}\Factory\Controller;
+
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
+use {{module}}\Controller\{{controller}}Controller;
+
+class {{controller}}ControllerFactory implements FactoryInterface
+{
+    public function createService(ServiceLocatorInterface $serviceLocator)
+    {
+        return new {{controller}}Controller();
+    }
+
+}

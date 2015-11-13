@@ -12,5 +12,19 @@
  */
 
 return array(
-    // ...
+    'db' => [
+        'driver' => 'Pdo',
+        'dsn' => 'mysql:dbname=dcp;host=localhost',
+        'username' => 'root', // DB username
+        'password' => '', // DB password
+    ],
+
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+        'invokables' => array(
+            'Zend\Authentication\AuthenticationService' => 'Zend\Authentication\AuthenticationService',
+        )
+    ),
 );

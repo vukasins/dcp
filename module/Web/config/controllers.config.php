@@ -10,7 +10,9 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Web\Controller\Index' => 'Web\Controller\IndexController',
-            'Web\Controller\Login' => 'Web\Controller\LoginController'
+        ),
+        'factories' => array(
+            'Web\Controller\Auth' => 'Web\Factory\Controller\AuthControllerFactory',
         ),
     )
 );

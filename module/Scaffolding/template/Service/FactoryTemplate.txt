@@ -1,0 +1,16 @@
+<?php
+
+namespace {{namespace}};
+
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
+use {{serviceNamespace}}\{{serviceName}};
+
+class {{serviceName}}Factory implements FactoryInterface
+{
+    public function createService(ServiceLocatorInterface $serviceLocator)
+    {
+        return new {{serviceName}};
+    }
+
+}

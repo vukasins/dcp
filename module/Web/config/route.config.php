@@ -54,21 +54,32 @@ return array(
             'login' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/login',
+                    'route'    => '/auth',
                     'defaults' => array(
-                        'controller' => 'Web\Controller\Login',
+                        'controller' => 'Web\Controller\Auth',
                         'action'     => 'login',
                     ),
                 ),
             ),
 
-            'login-authenticate' => array(
+            'authenticate' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/login/authenticate',
+                    'route'    => '/auth/authenticate',
                     'defaults' => array(
-                        'controller' => 'Web\Controller\Login',
+                        'controller' => 'Web\Controller\Auth',
                         'action'     => 'authenticate',
+                    ),
+                ),
+            ),
+
+            'logout' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/auth/logout',
+                    'defaults' => array(
+                        'controller' => 'Web\Controller\Auth',
+                        'action'     => 'logout',
                     ),
                 ),
             ),

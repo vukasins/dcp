@@ -1,0 +1,15 @@
+<?php
+
+namespace {{module}}\View\Helper;
+
+use Zend\View\Helper\AbstractHelper;
+
+class {{name}} extends AbstractHelper
+{
+
+    public function __construct()
+    {
+
+    }
+
+}

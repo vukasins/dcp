@@ -1,0 +1,7 @@
+<?php
+namespace {{namespaceName}};
+
+class {{className}} extends {{parentClassName}}
+{
+    protected $table = '{{tableName}}';
+}

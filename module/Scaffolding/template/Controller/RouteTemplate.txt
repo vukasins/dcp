@@ -1,0 +1,11 @@
+
+            '{route}' => [
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => [
+                    'route' => '/{route}',
+                    'defaults' => [
+                        'controller' => '{module}\Controller\{controller}',
+                        'action' => '{action}',
+                    ],
+                ],
+            ],

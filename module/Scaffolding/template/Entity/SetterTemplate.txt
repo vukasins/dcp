@@ -1,0 +1,5 @@
+    public function {{setterName}}(${{propertyName}})
+    {
+        $this->{{propertyName}} = ${{propertyName}};
+    }
+

@@ -1,0 +1,15 @@
+<?php
+
+namespace {{module}}\Controller\Plugin;
+
+use Zend\Mvc\Controller\Plugin\AbstractPlugin;
+
+class {{name}} extends AbstractPlugin
+{
+
+    public function __construct()
+    {
+
+    }
+
+}

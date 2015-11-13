@@ -1,0 +1,11 @@
+<?php
+return [
+    'service_manager' => [
+        'factories'          => [],
+        'abstract_factories' => [],
+        'aliases'            => [],
+        'services'           => [],
+        'initializers'       => [],
+        'shared'             => [],
+    ],
+];
