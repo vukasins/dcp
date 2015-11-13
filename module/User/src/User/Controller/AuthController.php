@@ -33,7 +33,7 @@ class AuthController extends AbstractActionController
         $password = $this->params()->fromPost('password');
 
         if (!$username || !$password) {
-            $this->flashMessenger()->addErrorMessage('Enter email and password pls.');
+            $this->flashMessenger()->addErrorMessage('All fields are required');
 
             return $this->redirect()->toRoute('login');
         }
@@ -41,7 +41,7 @@ class AuthController extends AbstractActionController
         $this->authService->getAdapter()->setIdentity($username)->setCredential($password);
 
         if (!$this->authService->authenticate()->isValid()) {
-            $this->flashMessenger()->addErrorMessage('Wrong credentials if you forgot password pls go to forgot pass.');
+            $this->flashMessenger()->addErrorMessage('Wrong credentials');
 
             return $this->redirect()->toRoute('login');
         }
@@ -55,7 +55,6 @@ class AuthController extends AbstractActionController
     public function logoutAction()
     {
         $this->authService->clearIdentity();
-        $this->flashMessenger()->addSuccessMessage('Congrats! Logout was successfully :P');
 
         return $this->redirect()->toRoute('login');
     }
