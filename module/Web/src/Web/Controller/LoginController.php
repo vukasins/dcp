@@ -13,9 +13,14 @@ use Zend\View\Model\ViewModel;
 
 class LoginController extends AbstractActionController
 {
-    public function indexAction()
+    public function loginAction()
     {
         $this->layout('layout/login');
         return new ViewModel();
+    }
+
+    public function authenticateAction()
+    {
+        echo 'adsf'; exit;
     }
 }
