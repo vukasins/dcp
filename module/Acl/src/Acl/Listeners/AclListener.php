@@ -16,11 +16,12 @@ class AclListener extends AbstractListenerAggregate
     public static function checkPermission(MvcEvent $e)
     {
         $auth = $e->getApplication()->getServiceManager()->get('Zend\Authentication\AuthenticationService');
+        list($module) = explode('\\', $e->getRouteMatch()->getParam('controller'));
 
         $isLogin = $e->getRouteMatch()->getMatchedRouteName() === 'login' ||
                    $e->getRouteMatch()->getMatchedRouteName() === 'authenticate';
 
-        if(!$auth->hasIdentity() && !$isLogin){
+        if($module != 'Scaffolding' && !$auth->hasIdentity() && !$isLogin){
             $url      = $e->getRouter()->assemble([], ['name' => 'login']);
             $response = $e->getResponse();
 

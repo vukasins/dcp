@@ -6,13 +6,13 @@
  * Time: 13.50
  */
 
-namespace Web\Factory\Controller;
+namespace User\Factory\Controller;
 
 use Zend\Authentication\Adapter\DbTable\CallbackCheckAdapter;
 use Zend\Crypt\Password\Bcrypt;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Web\Controller\AuthController;
+use User\Controller\AuthController;
 
 class AuthControllerFactory implements FactoryInterface {
     /**

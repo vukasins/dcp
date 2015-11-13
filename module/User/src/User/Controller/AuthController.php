@@ -6,7 +6,7 @@
  * Time: 10.51
  */
 
-namespace Web\Controller;
+namespace User\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -31,7 +31,6 @@ class AuthController extends AbstractActionController
     {
         $username = $this->params()->fromPost('username');
         $password = $this->params()->fromPost('password');
-        $remember = $this->params()->fromPost('remember');
 
         if (!$username || !$password) {
             $this->flashMessenger()->addErrorMessage('Enter email and password pls.');
@@ -50,11 +49,7 @@ class AuthController extends AbstractActionController
         $user = $this->authService->getAdapter()->getResultRowObject(null, 'password');
         $this->authService->getStorage()->write($user);
 
-        if ($remember == 1) {
-
-        }
-
-        return $this->redirect()->toRoute('application');
+        return $this->redirect()->toRoute('home');
     }
 
     public function logoutAction()

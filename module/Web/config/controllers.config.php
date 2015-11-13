@@ -12,7 +12,6 @@ return array(
             'Web\Controller\Index' => 'Web\Controller\IndexController',
         ),
         'factories' => array(
-            'Web\Controller\Auth' => 'Web\Factory\Controller\AuthControllerFactory',
         ),
     )
 );
