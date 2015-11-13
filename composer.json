@@ -1,0 +1,18 @@
+{
+    "require": {
+        "php": ">=5.6",
+        "ext-intl": "*",
+        "zendframework/zendframework": "2.5.*",
+        "tasmaniski/zf2-current-route": "1.0.*",
+        "tasmaniski/zf2-config-helper": "1.0.*",
+        "tasmaniski/zf2-params-helper": "1.0.*",
+        "guzzlehttp/guzzle": "~6.0",
+        "robmorgan/phinx": "^0.4.6"
+    },
+    "require-dev": {
+        "zendframework/zend-developer-tools": "dev-master",
+        "bjyoungblood/bjy-profiler": "1.1.*",
+        "zendframework/zftool": "dev-master",
+        "ccampbell/chromephp": "4.1.*"
+    }
+}
